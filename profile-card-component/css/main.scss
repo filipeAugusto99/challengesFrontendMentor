@@ -1,0 +1,138 @@
+@import 'base';
+@import 'variables';
+
+.container {
+  position: relative;
+
+  .top-decoration {
+    position: absolute;
+    top: -528px;
+    left: -284px;
+    z-index: -999999;
+    width: 978px;
+    height: 976px;
+  }
+  
+  .bottom-decoration {
+    position: absolute;
+    bottom: -628px;
+    right: -250px;
+    z-index: -999999;
+    width: 978px;
+    height: 976px;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    
+    .card-content {
+      position: relative;
+      width: 350px;
+      background-color: $c0;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      z-index: -99999;
+      
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+  
+        .cover {
+          position: absolute;
+          top: -90px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          z-index: -9;
+          width: 352px;
+        }
+  
+        .img {
+          width: 96px;
+          height: 96px;
+          border-radius: 50%;
+          border: 5px solid $c0;
+        }
+  
+        .h2 {
+          margin-top: 24px;
+          margin-right: 8.5px;
+          font-weight: 700;
+          font-size: 1.125rem;
+          color: $p2;
+  
+          .spanH2 {
+            font-weight: 400;
+            color: $c1;
+          }
+        }
+        
+        .span {
+          font-size: 0.875rem;
+          font-weight: 400;
+          color: $c1;
+          margin-top: 13px;
+          margin-bottom: 28px;
+        }
+      }
+  
+      .profile-information {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 50px 27px 50px;
+        text-align: center;
+        border-top: 1px solid $c2;
+        
+        h3 {
+          font-weight: 700;
+          font-size: 1.125rem;
+          line-height: 1.395em;
+          color: $p2;
+        }
+  
+        span {
+          font-weight: 400;
+          font-size: 0.625rem;
+          letter-spacing: 0.09375em;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 375px) {
+  .container {
+    .top-decoration {
+      height: 375px;
+      width: 375px;
+      top: -160px;
+      left: -167px;
+    }
+
+    .bottom-decoration {
+      height: 375px;
+      width: 375px;
+      bottom: -79px;
+      right: -167px;
+    }
+
+    .card {
+      .card-content {
+        width: 326px;
+  
+        .profile {
+          .cover {
+            width: 328px;
+            top: -80px;
+          }
+        }
+      }
+    }
+  }
+}
