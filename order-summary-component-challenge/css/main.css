@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background-color: #E0E8FF;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg__image {
+  background: url("../images/pattern-background-mobile.svg") no-repeat;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.card .card-contant {
+  width: 327px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+}
+.card .card-contant .card-perfil img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card .card-contant .texts {
+  text-align: center;
+}
+.card .card-contant .texts h1 {
+  font-size: 1.375rem;
+  font-weight: 900;
+  color: #1F2E55;
+  margin: 16px 32px;
+}
+.card .card-contant .texts p {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.5625em;
+  margin: 0 32px 24px 32px;
+  color: #717FA6;
+}
+.card .card-contant .flat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17px 16px 16px 16px;
+  background-color: #F7F9FF;
+  max-width: 280px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.card .card-contant .flat .price {
+  margin-left: 20px;
+  margin-right: 42.34px;
+}
+.card .card-contant .flat .price h2 {
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: #1F2E55;
+  line-height: 1.1875em;
+}
+.card .card-contant .flat .price span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.1875em;
+  color: #717FA6;
+}
+.card .card-contant .flat .change button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #382AE1;
+  text-decoration: underline;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.1875em;
+  transition: all ease 300ms;
+}
+.card .card-contant .flat .change button:hover {
+  color: #766CF1;
+  text-decoration: none;
+}
+.card .card-contant .flat-buy {
+  margin-top: 24px;
+  display: flex;
+}
+.card .card-contant .flat-buy button {
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-family: "Red Hat Display";
+  font-weight: 900;
+  outline: none;
+  border: none;
+  color: #FFFFFF;
+  background-color: #382AE1;
+  width: 279px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 11px;
+  box-shadow: 0 20px 20px rgba(56, 42, 225, 0.190291);
+  transition: all ease 300ms;
+}
+.card .card-contant .flat-buy button:hover {
+  color: #FFFFFF;
+  background-color: #766CF1;
+}
+.card .card-contant .cancel {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  display: flex;
+}
+.card .card-contant .cancel button {
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-family: "Red Hat Display";
+  font-weight: 900;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: #717FA6;
+  margin: 0 auto;
+  transition: all ease 300ms;
+}
+.card .card-contant .cancel button:hover {
+  color: #1F2E55;
+}
+
+@media (min-width: 768px) {
+  .bg__image {
+    background: url("../images/pattern-background-desktop.svg") no-repeat center/cover;
+    height: 50vh;
+  }
+  .card .card-contant {
+    width: 450px;
+  }
+  .card .card-contant .texts h1 {
+    font-size: 1.75rem;
+  }
+  .card .card-contant .texts p {
+    font-size: 1rem;
+    margin: 0 48px 20px 48px;
+  }
+  .card .card-contant .flat {
+    max-width: 354px;
+  }
+  .card .card-contant .flat .price {
+    margin-right: 74.29px;
+  }
+  .card .card-contant .flat h2 {
+    font-size: 1rem;
+  }
+  .card .card-contant .flat span {
+    font-size: 1rem;
+  }
+  .card .card-contant .flat-buy button {
+    width: 354px;
+  }
+}/*# sourceMappingURL=main.css.map */

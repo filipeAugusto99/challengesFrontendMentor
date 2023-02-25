@@ -1,0 +1,202 @@
+@import 'base';
+@import 'variables';
+
+
+.bg__image {
+  background: url('../images/pattern-background-mobile.svg') no-repeat;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  
+  .card-contant {
+    width: 327px;
+    border-radius: 20px;
+    background-color: $c0;
+    box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+    
+    .card-perfil {
+      img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+    }
+    
+    .texts {
+      text-align: center;
+      h1 {
+        font-size: 1.375rem;
+        font-weight: 900;
+        color: $p2;
+        margin: 16px 32px;
+      }
+
+      p {
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 1.5625em;
+        margin: 0 32px 24px 32px;
+        color: $c3;
+      }
+    }
+
+    .flat {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 17px 16px 16px 16px;
+      background-color: $c4;
+      max-width: 280px;
+      margin: 0 auto;
+      border-radius: 20px;
+
+      .price {
+        margin-left: 20px;
+        margin-right: 42.34px;
+
+        h2 {
+          font-size: 0.875rem;
+          font-weight: 900;
+          color: $p2;
+          line-height: 1.1875em;
+        }
+
+        span {
+          font-size: 0.875rem;
+          font-weight: 500;
+          line-height: 1.1875em;
+          color: $c3;
+        }
+      }
+
+      .change {
+        button {
+          cursor: pointer;
+          outline: none;
+          border: none;
+          background-color: transparent;
+          color: $p1;
+          text-decoration: underline;
+          font-size: 0.8125rem;
+          font-weight: 700;
+          line-height: 1.1875em;
+          transition: all ease 300ms;
+          
+          &:hover {
+            color: $p3;
+            text-decoration: none;
+          }
+        }
+
+      }
+    }
+
+    .flat-buy {
+      margin-top: 24px;
+      display: flex;
+
+      button {
+        cursor: pointer;
+        font-size: 0.9375rem;
+        font-style: normal;
+        font-family: 'Red Hat Display';
+        font-weight: 900;
+        outline: none;
+        border: none;
+        color: $c0;
+        background-color: $p1;
+        width: 279px;
+        height: 50px;
+        margin: 0 auto;
+        border-radius: 11px;
+        box-shadow: 0 20px 20px rgba(56, 42, 225, 0.190291);
+        transition: all ease 300ms;
+
+        &:hover {
+          color: $c0;
+          background-color: $p3;
+        }
+      }
+    }
+
+    .cancel {
+      margin-top: 24px;
+      margin-bottom: 32px;
+      display: flex;
+      
+      button {
+        cursor: pointer;
+        font-size: 0.9375rem;
+        font-family: 'Red Hat Display';
+        font-weight: 900;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        color: $c3;
+        margin: 0 auto;
+        transition: all ease 300ms;
+        
+        &:hover {
+          color: $p2;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .bg__image {
+    background: url("../images/pattern-background-desktop.svg") no-repeat center/cover;
+    height: 50vh;
+  }
+
+  .card {
+    .card-contant {
+      width: 450px;
+
+      .texts {
+        h1 {
+          font-size: 1.75rem;
+        }
+
+        p {
+          font-size: 1rem;
+          margin: 0 48px 20px 48px;
+        }
+      }
+
+      .flat {
+        max-width: 354px;
+        
+        .price {
+          margin-right: 74.29px;
+        }
+        
+        h2 {
+          font-size: 1rem;
+        }
+    
+        span {
+          font-size: 1rem;
+        }
+      }
+
+      .flat-buy {
+        button {
+          width: 354px;
+        }
+      }
+    }
+  }
+}
