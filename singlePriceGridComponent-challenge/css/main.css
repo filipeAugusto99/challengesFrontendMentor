@@ -114,6 +114,7 @@ a {
   margin-bottom: 11px;
 }
 .container .main .sub .button {
+  cursor: pointer;
   outline: none;
   border: none;
   background-color: #C0DF33;
