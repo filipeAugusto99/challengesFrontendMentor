@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import 'variables';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $c2;
+  font-family: 'Karla', sans-serif;
 }
 
 img {
@@ -16,5 +29,5 @@ a {
   text-decoration: none;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center; margin-bottom: 100px;}
+.attribution a { color: $s1; }
