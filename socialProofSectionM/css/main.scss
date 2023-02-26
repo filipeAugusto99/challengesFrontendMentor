@@ -1,6 +1,31 @@
 @import 'variables';
 @import 'base';
 
+
+.bg-image-top {
+  background-image: url('../images/bg-pattern-top-mobile.svg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -99999;
+  top: -100%;
+  bottom: 0;
+  left: -35%;
+  right: 0;
+}
+
+.bg-image-bottom {
+  background-image: url('../images/bg-pattern-bottom-desktop.svg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -99999;
+  top: 0;
+  bottom: -50%;
+  left: 0;
+  right: 20%;
+}
+
 .main {
   margin-top: 118px;
   height: 100vh;
@@ -45,9 +70,6 @@
         
         li:nth-child(2) {
           margin-left: 173px;
-          .rate-span {
-            margin-right: 15px;
-          }
         }
         
         li:last-child {
@@ -65,7 +87,7 @@
           
           img {
             width: 16.55px;
-            margin: 20px 8.45px;
+            margin: 20px 8.45px 20px 0;
           }
 
           .rate-span {
@@ -85,6 +107,7 @@
       
       .clients-list {
         display: flex;
+        flex-wrap: wrap;
         
         li:first-child {
           margin-top: 71px;
@@ -154,12 +177,119 @@
   }
 }
 
-.footer {
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
+@media (max-width: 375px) {
+  .bg-image-top {
+    background-image: url('../images/bg-pattern-top-mobile.svg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -99999;
+    top: -50%;
+    bottom: 0;
+    left: -20%;
+    right: 0;
+    }
+
+    .bg-image-bottom {
+      background-image: url('../images/bg-pattern-bottom-mobile.svg') ;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      z-index: -99999;
+      top: 0;
+      bottom: -30%;
+      left: 0;
+      right: 20%;
+    }
+  .main {
+    margin-top: 82px;
+
+
+    .container {
+      max-width: 327px;
+      grid-template-columns: 1fr;
+
+      .about {
+        text-align: center;
+
+        .about-h1 {
+          padding: 0 40px;
+          font-size: 2.5rem;
+          line-height: 2rem;
+          
+          .span-mobile {
+            display: block;
+          }
+        }
+
+        .about-p {
+          margin-top: 17px;
+          margin-bottom: 39px;
+        }
+      }
+
+      .rate {
+        grid-column: 1;
+
+        .rates-ul {
+          li:first-child {
+            margin-left: 0;
+          }
+          
+          li:nth-child(2) {
+            margin-left: 0;
+          }
+          
+          li:last-child {
+            margin-left: 0;
+          }
+
+          li {
+            width: 327px;
+            flex-direction: column;
+            padding-left: 0;
+            
+            img {
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+
+            .rate-span {
+              padding-left: 0;
+              margin-bottom: 15px;
+            }
+          }
+
+        }
+      }
+      .clients {
+        grid-column: 1;
+        
+        .clients-list {
+          display: flex;
+          
+          li:first-child {
+            margin-top: 49px;
+            margin-right: 0;
+          }
+  
+          li:nth-child(2) {
+            margin-top: 16px;
+            margin-right: 0;
+          }
+  
+          li:last-child {
+            margin-top: 16px;
+            margin-bottom: 99px;
+            margin-right: 0;
+          }
+          
+          li {
+            width: 327px;
+            
+          }
+        }
+      }
+    }
   }
 }
