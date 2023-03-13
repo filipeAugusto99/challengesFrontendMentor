@@ -171,7 +171,7 @@ a {
   }
   .main .container .texts {
     background-color: #FFFFFF;
-    padding: 32px 32px 32px 32px;
+    padding: 32px 32px 0px 32px;
   }
   .main .container .texts .main_text {
     font-size: 1rem;
@@ -179,8 +179,11 @@ a {
     letter-spacing: 0.0125rem;
   }
   .main .container .texts .avatar .hidden-share {
-    top: -10px;
-    right: -31px;
+    top: -5px;
+    right: -33px;
     width: 327px;
+  }
+  .main .container .texts .avatar .hidden-share::before {
+    bottom: 0px;
   }
 }/*# sourceMappingURL=main.css.map */
