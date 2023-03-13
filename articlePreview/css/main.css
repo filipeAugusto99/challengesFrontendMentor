@@ -154,4 +154,33 @@ a {
   height: 32px;
   border-radius: 100%;
   background-color: #ECF2F8;
+}
+
+@media (max-width: 375px) {
+  .main {
+    max-width: 327px;
+    min-height: 15vh;
+  }
+  .main .container {
+    gap: 0;
+    grid-template-columns: 1fr;
+    height: 0px;
+  }
+  .main .container .photo {
+    background-color: #FFFFFF;
+  }
+  .main .container .texts {
+    background-color: #FFFFFF;
+    padding: 32px 32px 32px 32px;
+  }
+  .main .container .texts .main_text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.0125rem;
+  }
+  .main .container .texts .avatar .hidden-share {
+    top: -10px;
+    right: -31px;
+    width: 327px;
+  }
 }/*# sourceMappingURL=main.css.map */
