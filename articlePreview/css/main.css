@@ -25,6 +25,8 @@ a {
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .attribution a {
@@ -117,13 +119,13 @@ a {
   letter-spacing: 0.3125rem;
   margin-right: 21px;
 }
-.main .container .texts .avatar .hidden-share img {
+.main .container .texts .avatar .hidden-share a a {
   cursor: pointer;
   width: 20px;
   height: 20px;
   margin-right: 16px;
 }
-.main .container .texts .avatar .hidden-share img:last-child {
+.main .container .texts .avatar .hidden-share a a:last-child {
   margin-right: 0;
 }
 .main .container .texts .avatar .hidden-share::before {
@@ -136,14 +138,6 @@ a {
   border-style: solid;
   border-color: #48556A transparent transparent transparent;
 }
-.main .container .texts .avatar .icon-share {
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-}
-.main .container .texts .avatar .icon-share:hover::before {
-  background-color: #48556A;
-}
 .main .container .texts .avatar .icon-share::before {
   content: "";
   position: absolute;
@@ -155,6 +149,14 @@ a {
   border-radius: 100%;
   background-color: #ECF2F8;
 }
+.main .container .texts .avatar .icon-share {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.main .container .texts .avatar .icon-share:hover::before {
+  background-color: #48556A;
+}
 
 @media (max-width: 375px) {
   .main {
@@ -162,16 +164,21 @@ a {
     min-height: 15vh;
   }
   .main .container {
+    border-radius: 10px;
     gap: 0;
     grid-template-columns: 1fr;
-    height: 0px;
+    border: 10px;
+    height: 0;
   }
-  .main .container .photo {
-    background-color: #FFFFFF;
+  .main .container .photo img {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
   }
   .main .container .texts {
     background-color: #FFFFFF;
-    padding: 32px 32px 0px 32px;
+    padding: 32px 32px 10px 32px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   .main .container .texts .main_text {
     font-size: 1rem;
@@ -179,9 +186,11 @@ a {
     letter-spacing: 0.0125rem;
   }
   .main .container .texts .avatar .hidden-share {
-    top: -5px;
+    top: -3px;
     right: -33px;
     width: 327px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
   .main .container .texts .avatar .hidden-share::before {
     bottom: 0px;

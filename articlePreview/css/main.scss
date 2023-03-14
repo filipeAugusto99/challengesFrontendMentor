@@ -101,15 +101,18 @@
             margin-right: 21px;
           }
 
-          img {
-            cursor: pointer;
-            width: 20px;
-            height: 20px;
-            margin-right: 16px;
-          }
+          a {
 
-          img:last-child {
-            margin-right: 0;
+            a {
+              cursor: pointer;
+              width: 20px;
+              height: 20px;
+              margin-right: 16px;
+            }
+  
+            a:last-child {
+              margin-right: 0;
+            }
           }
         }
 
@@ -123,17 +126,7 @@
           border-style: solid;
           border-color: $p1 transparent transparent transparent;
         }
-
-        .icon-share {
-          position: relative;
-          z-index: 1;
-          cursor: pointer;
-
-          &:hover::before {
-            background-color: $p1;
-          }
-        }
-
+        
         .icon-share::before{
           content: "";
           position: absolute;
@@ -145,6 +138,16 @@
           border-radius: 100%;
           background-color: $c1;
         }
+
+        .icon-share {
+          position: relative;
+          z-index: 1;
+          cursor: pointer;
+
+          &:hover::before {
+            background-color: $p1;
+          }
+        }
       }
     }
   }
@@ -154,19 +157,26 @@
   .main {
     max-width: 327px;
     min-height: 15vh;
-
+    
     .container {
+      border-radius: 10px;
       gap: 0;
       grid-template-columns: 1fr;
-      height: 0px;
+      border: 10px;
+      height: 0;
 
       .photo {
-        background-color: $c0;
+        img {
+          border-top-right-radius: 10px;
+          border-bottom-left-radius: 0;
+        }
       }
 
       .texts {
         background-color: $c0;
-        padding: 32px 32px 0px 32px;
+        padding: 32px 32px 10px 32px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
 
         .main_text {
           font-size: 1rem;
@@ -176,9 +186,11 @@
 
         .avatar {
           .hidden-share {
-            top: -5px;
+            top: -3px;
             right: -33px;
             width: 327px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
           }
           
           .hidden-share::before {
